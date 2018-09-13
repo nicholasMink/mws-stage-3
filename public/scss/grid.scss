@@ -1,0 +1,84 @@
+
+.flex {
+  display: flex;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+// Justify Contents
+.justify__center {
+  justify-content: center;
+}
+.justify__start {
+  justify-content: flex-start;
+}
+.justify__end {
+  justify-content: flex-end;
+}
+.justify__between {
+  justify-content: space-between;
+}
+.justify__evenly {
+  justify-content: space-evenly;
+}
+
+// Align Contents
+.align__center {
+  align-items: center;
+}
+.align__center__self {
+  align-self: center;
+}
+.align__baseline {
+  align-items: baseline;
+}
+
+// Flex rows and columns
+.flex__row__nowrap {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.flex__row__wrap {
+  display: flex;
+  flex-flow: row wrap;
+}
+.flex__column__nowrap {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.flex__column__wrap {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+// Flex Elements
+.align__start {
+  align-self: flex-start;
+}
+.align__end {
+  align-self: flex-end;
+}
+.grow {
+  flex-grow: 1;
+}
+
+// Spacing
+.row__spacing__small {
+  margin: 0 1rem;
+}
+
+.width__max {
+  width: 100%;
+}
+
+// Containers
+.container {
+  max-width: 21rem;
+  margin: 0 auto;
+}
+@media screen and (min-width: 600px) {
+  .container {
+    width: 90%;
+    max-width: 40rem;
+  }
+}

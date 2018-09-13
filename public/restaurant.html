@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="img/favicon.png">
+  <meta name="theme-color" content="#eeeeee">
+  <link rel="manifest" href="manifest.json" />
+  <!-- Normalize.css for better cross-browser consistency -->
+  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+  <!-- Main CSS files -->
+  <link rel="stylesheet" href="./css/styles.css" type="text/css">
+  <!-- <link rel="stylesheet" href="./css/grid.css" type="text/css"> -->
+  <title>Restaurant Info</title>
+</head>
+
+<body class="inside">
+  <a class="hidden__link" href="#restaurant-details">Skip to main</a>
+  <!-- Beginning header -->
+  <header>
+    <!-- Beginning nav -->
+    <nav>
+      <h1><a href="/">Restaurant Reviews</a></h1>
+    </nav>
+    <!-- Beginning breadcrumb -->
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+      <ol id="breadcrumb" name="breadcrumb">
+        <li><a href="/">Home</a></li>
+      </ol>
+    </nav>
+    <!-- End breadcrumb -->
+    <!-- End nav -->
+  </header>
+  <!-- End header -->
+
+  <!-- Beginning main -->
+  <main id="maincontent">
+    <!-- Beginning restaurant -->
+    <section id="restaurant-container" class="flex__column__nowrap align__center">
+      <img id="restaurant-img">
+      <div id="restaurant-details" class="container">
+        <h1 id="restaurant-name"></h1>
+        <div id="restaurant-favorite"></div>
+        <p id="restaurant-address"></p>
+        <p id="restaurant-cuisine"></p>
+        <h2 class="section__heading">Hours</h2>
+        <table aria-label="Restaurant Hours" id="restaurant-hours"></table>
+      </div>
+    </section>
+    <!-- end restaurant -->
+    <!-- Beginning reviews -->
+    <section id="reviews-container" class="container">
+      <ul id="reviews-list"></ul>
+    </section>
+    <!-- End reviews -->
+    <section class="container">
+      <h2 class="section__heading">Submit Review</h2>
+      <form class="flex__column__nowrap form__review" name="reviewForm">
+        <div class="flex__row__wrap justify__between form__review__top">
+          <label for="name">Name
+          <input name="name" id="name" placeholder="Name" tabindex="0" required>
+          </label>
+          <label for="rating">Select Your Rating
+            <select name="rating" id="rating" tabindex="0" role="group" required>
+              <option value='5'>5</option>
+              <option value='4'>4</option>
+              <option value='3'>3</option>
+              <option value='2'>2</option>
+              <option value='1'>1</option>
+            </select>
+          </label>
+        </div>
+        <label for="comments" class="align__center__self">Write a Review
+          <textarea name="comments" id="comments" placeholder="Your Review" tabindex="0" required></textarea>
+        </label>
+        <button type="submit" id="submitBtn">Post Review</button>
+      </form>
+    </section>
+    <div class="container">
+      <h2 class="section__heading">Location</h2>
+    </div>
+    <div class="container">
+      <!-- Beginning map -->
+      <section id="map-container" class="restaurant__map container">
+        <div id="map" role="application"></div>
+      </section>
+      <!-- End map -->
+    </div>
+  </main>
+  <!-- End main -->
+  
+  <!-- Beginning footer -->
+  <footer id="footer">
+    Copyright © 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+  </footer>
+  <!-- End footer -->
+
+  <!-- Beginning scripts -->
+  <!-- Main javascript file -->
+  <script type="text/javascript" src="js/restaurant.js"></script>
+  <!-- Google Maps -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlRnBdMvhFPtUdJnramc_kLQOwMEyfbYs&libraries=places&callback=initMap"></script>
+  <!-- End scripts -->
+
+</body>
+
+</html>
